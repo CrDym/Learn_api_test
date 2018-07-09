@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2018/7/9 15:40
 # @Author  : Cr
-# @File    : operation.py
+# @File    : operation_excel.py
 import xlrd
 class OperationExcel:
     def __init__(self,file_name=None,sheet_id=None):
@@ -9,7 +9,7 @@ class OperationExcel:
             self.file_name = file_name
             self.sheet_id = sheet_id
         else:
-            self.file_name ='../dataconfig/interface.xlsx'
+            self.file_name ='../dataconfig/interface.xls'
             self.sheet_id = 0
         self.data = self.get_data()
     #获取sheet的内容
