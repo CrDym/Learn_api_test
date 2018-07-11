@@ -4,7 +4,7 @@ class OperationJson:
         self.data = self.read_data()
 
     def read_data(self):
-        with open("./dataconfig/test.json") as fp:
+        with open("../dataconfig/test.json") as fp:
             data = json.load(fp)
             return data
 
