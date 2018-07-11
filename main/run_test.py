@@ -24,6 +24,7 @@ class RunTest:
                 res = self.run_method.run_main(method,url,data,header)
             return res
 
+
 if __name__ == '__main__':
     run = RunTest()
     print(run.go_on_run())
