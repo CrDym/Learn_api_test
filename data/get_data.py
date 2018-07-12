@@ -67,4 +67,34 @@ class GetData:
             return None
         return expect
 
-        
+    #写入数据
+    def write_result(self,row,value):
+        col = int(data_config.get_result())
+        self.opera_excel.write_value(row,col,value)
+
+    #获取依赖数据的key
+    def get_depend_key(self,row):
+        col = int(data_config.get_data_depend())
+        depent_key = self.opera_excel.get_cell_vlaue(row,col)
+        if depent_key == " ":
+            return None
+        else:
+            return depent_key
+
+    #判断是否有case依赖
+    def is_depend(self,row):
+        col = int(data_config.get_field_depend())
+        depend_case_id = self.opera_excel.get_cell_vlaue(row,col)
+        if depend_case_id == " ":
+            return None
+        else:
+            return depend_case_id
+
+    #获取数据依赖字段
+    def get_depend_filed(self,row):
+        col = int(data_config.get_field_depend())
+        data = self.opera_excel.get_cell_vlaue(row,col)
+        if data == " ":
+            return None
+        else:
+            return data
